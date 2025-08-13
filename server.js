@@ -27,8 +27,21 @@ const connectDB = async () => {
 };
 connectDB();
 
+app.get('/login',(req,res)=>{
+  res.send("user login varsha");
+})
+
+app.get('/',(req,res)=>{
+  res.send("homepage")
+})
+
+
+
 // Server listening on all interfaces
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+// app.listen(3000);
